@@ -114,6 +114,26 @@ $("#time").on("input", function() {
 $(document).mousemove(function(event) {
     mouse.x = event.pageX;
     mouse.y = event.pageY;
+    
+    if (hover.a && !(hover.b || hover.c || hover.d)) {
+        $("html").css("cursor", "crosshair");
+        
+        if (window.getSelection) {
+            if (window.getSelection().empty) {
+                window.getSelection().empty();
+            } else if (window.getSelection().removeAllRanges) {
+                window.getSelection().removeAllRanges();
+            }
+        } else if (document.selection) {
+            if (document.getSelection().empty) {
+                document.selection.empty();
+            } else if (document.getSelection().removeAllRanges) {
+                document.getSelection().removeAllRanges();
+            }
+        }
+    } else {
+        $("html").css("cursor", "");
+    }
 });
 
 $(document).mousedown(function(event) {

@@ -58,5 +58,6 @@ input[disabled="disabled"] {
 img:not([id="preview"]) {
     position: absolute;
     transform: translate(-50%, -50%);
+    user-select: none;
     z-index: -1;
 }
