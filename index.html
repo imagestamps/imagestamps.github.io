@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Allows creation of stamps from images.">
+        <meta name="author" content="Image Stamps">
+        <link rel="icon" href="assets/images/stamp.png">
+        
+        <title>Image Stamps</title>
+        
+        <script src="assets/js/redirect.js"></script>
+        
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.min.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="ui">
+            <p>Select an image, then customize how it gets stamped on the screen.</p>
+            <hr>
+            <input type="radio" name="upload" checked="checked" value="1">
+            <input type="file" accept="image/*">
+            <br>
+            <input type="radio" name="upload" value="2">
+            <input type="url" placeholder="or type a URL to one" disabled="disabled">
+            <p>Preview:&nbsp;
+                <img id="preview">
+            </p>
+            <hr>
+            <p>Image width:
+                <input id="width" type="number" min="0" disabled="disabled">
+            px</p>
+            <p>Image height:
+                <input id="height" type="number" min="0" disabled="disabled">
+            px</p>
+            <p>
+                <input type="checkbox" checked="checked">
+            Lock aspect ratio</p>
+            <hr>
+            <p>Stamp images
+                <select>
+                    <option value="1">always</option>
+                    <option value="2" selected="selected">while the mouse is held down</option>
+                    <option value="3">on mouse clicks</option>
+                </select>.
+            </p>
+            <p>Time between stamps:
+                <input id="time" type="number" min="0" value="100">
+            ms</p>
+            <hr>
+            <button>Clear all</button>
+            <p id="copyright">&copy; 2016 Image Stamps</p>
+        </div>
+        <div id="cover"></div>
+        <div id="ui-toggle">
+            <i class="fa fa-caret-left fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/ui-toggle.js"></script>
+    </body>
+</html>

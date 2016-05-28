@@ -1,0 +1,62 @@
+@font-face {
+    src: url("../fonts/OpenSans.ttf");
+    font-family: OpenSans;
+}
+
+body {
+    background-image: url("../images/grid.png");
+    margin: 0;
+}
+
+#ui {
+    background-color: #eee;
+    box-shadow: 0 0 0.5em 0.1em #999;
+    font-family: OpenSans, Verdana, sans-serif;
+    height: 100%;
+    padding: 1em;
+    position: fixed;
+    width: 20em;
+}
+
+hr {
+    border-color: #99e;
+}
+
+input[type="number"] {
+    width: 5em;
+}
+
+input[disabled="disabled"] {
+    cursor: not-allowed;
+}
+
+#copyright {
+    bottom: 0;
+    position: fixed;
+}
+
+#cover {
+    background-color: #eee;
+    height: 2em;
+    position: fixed;
+    width: 22em;
+    z-index: 1;
+}
+
+#ui-toggle {
+    background-color: #eee;
+    box-shadow: 0 0 0.5em 0.1em #999;
+    cursor: pointer;
+    left: 21.5em;
+    position: fixed;
+}
+
+#preview {
+    width: 3em;
+}
+
+img:not([id="preview"]) {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
